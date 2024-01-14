@@ -7,7 +7,7 @@ function ResetPasswordpage(props) {
 
     const [newPassword, setnewPassword] = useState('');
     const [confirmPassword, setconfirmPassword] = useState('');
-    const [response, setresponse] = useState('');
+    const [responce, setresponce] = useState('');
 
 
     const [error, setError] = useState('');
@@ -113,13 +113,13 @@ function ResetPasswordpage(props) {
 
         });
 
-        const fetchresponse = await fetchpassword.json();
+        const fetchresponce = await fetchpassword.json();
 
-        console.log(fetchresponse);
-        setresponse(fetchresponse.message);
+        console.log(fetchresponce);
+        setresponce(fetchresponce.message);
 
         setTimeout(() => {
-            setresponse("");
+            setresponce("");
 
 
 
@@ -162,7 +162,7 @@ function ResetPasswordpage(props) {
                     <button onClick={handleChangePasswordBtn} className='btn btn-primary mt-3'>change password</button>
                     <br />
                     <div className='text-danger'>
-                        {response && <p>{response} </p>}
+                        {responce && <p>{responce} </p>}
                         {error && <p> {error} </p>}
 
                     </div>
